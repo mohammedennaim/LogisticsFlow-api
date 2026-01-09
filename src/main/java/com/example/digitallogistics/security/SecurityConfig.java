@@ -28,7 +28,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @Configuration
 @EnableMethodSecurity
-@Profile("!test")  // Ne pas charger cette configuration en mode test
+@Profile("!test") 
 public class SecurityConfig {
 
     private final KeycloakJwtConverter keycloakJwtConverter;

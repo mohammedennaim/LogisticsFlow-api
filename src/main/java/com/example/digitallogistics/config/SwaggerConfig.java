@@ -54,13 +54,6 @@ public class SwaggerConfig {
                                                 .addString("profile", "Profile information")
                                                 .addString("email", "Email address")
                                                 .addString("roles", "User roles")))));
-        // Bearer Authentication comme option alternative (pour coller un token manuellement)
-        components.addSecuritySchemes("Bearer Authentication", 
-                new SecurityScheme()
-                        .type(SecurityScheme.Type.HTTP)
-                        .scheme("bearer")
-                        .bearerFormat("JWT")
-                        .description("Option alternative : Collez votre token JWT Keycloak manuellement"));
         
         return new OpenAPI()
                 .info(new Info()
